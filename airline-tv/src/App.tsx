@@ -2,7 +2,6 @@ import React from 'react';
 import { ReactDOM } from 'react';
 import './App.css';
 import Episode from './Episodes/episode';
-import dataEpisode from './Episodes/episode-data';
 
 function overzicht(){
   return (
