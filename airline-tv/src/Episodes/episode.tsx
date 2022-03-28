@@ -7,10 +7,11 @@ function episodeInfo (props: any) {
         <div className="episodeList">
             <div className="hourTitle">
                 <p>{props.airtime}</p>
+                <p>-</p>
                 <h2>{props.name}</h2>
             </div>
             <div className="typeSummary">
-                <p>{props.showName}</p>
+                <p className="">{props.showName}</p>
                 <p>{props.showType}</p>
                 <p>{props.summary}</p>
             </div>
