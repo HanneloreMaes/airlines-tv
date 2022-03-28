@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import './episode.css';
 
-function episodeInfo(props: any){
+function episodeInfo (props: any) {
+    
     return(
-        <div>
-            <h2>{props.name}</h2>
-            <ul>
-                <li>{props.airtime}</li>
-                <li>{props.summary}</li>
-                <li>{props.showName}</li>
-                <li>{props.showType}</li>
-            </ul>
+        <div className="episodeList">
+            <div className="hourTitle">
+                <p>{props.airtime}</p>
+                <h2>{props.name}</h2>
+            </div>
+            <div className="typeSummary">
+                <p>{props.showName}</p>
+                <p>{props.showType}</p>
+                <p>{props.summary}</p>
+            </div>
         </div>
     )
 }
+
 export default episodeInfo;

@@ -1,0 +1,11 @@
+.episodeList{
+    padding-left: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hourTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
