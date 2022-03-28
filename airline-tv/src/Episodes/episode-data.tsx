@@ -13,7 +13,7 @@ function DataEpisode(){
         <div>
             {
                 episodes.map(episode =>
-                    <EpisodeInfo airtime={episode['airtime']} name={episode['name']} showName={episode['show']['name']} showType={episode['show']['type']} summary={episode['summary']}/>
+                    <EpisodeInfo airtime={episode['airtime']} name={episode['name']} showName={episode['show']['name']} showType={episode['show']['type']} summary={episode['show']['summary']}/>
                 )
             }
         </div>
