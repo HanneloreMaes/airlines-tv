@@ -1,9 +1,8 @@
 import React from 'react';
-import { ReactDOM } from 'react';
 import './App.css';
 import Data from './Episodes/episode-data'
 
-function overzicht(){
+function Overzicht(){
   return (
     <div className = "listOverview">
       <h1>De overzichtspagina</h1>
@@ -12,4 +11,4 @@ function overzicht(){
   )
 }
 
-export default overzicht;
+export default Overzicht;
