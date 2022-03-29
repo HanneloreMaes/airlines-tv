@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
-import Data from './Components/Hooks/episodeData.hooks'
+import Data from './Components/Hooks/episodeData.hooks';
+import Time from './Components/Time/time';
 
 function Overzicht(){
+
   return (
     <div className = "listOverview">
-      <h1>De overzichtspagina</h1>
-      <Data/>
+        <Data/>
     </div>
   )
 }

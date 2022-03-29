@@ -14,17 +14,19 @@ function DataEpisode(props: any){
         })
     }, [props]);
 
+    const episode = episodes.sort((a,b) => a["show"]["network"]["name"] - b["show"]["network"]["name"])
+
     return(
         <div>
             {
                 isLoading ? 'Inladen is bezig' : 
-                episodes.map(episode =>
-                    <EpisodeInfo airtime={episode['airtime']} name={episode['name']} showName={episode['show']['name']} showType={episode['show']['type']} summary={episode['show']['summary']}/>
-                )
+                    episode.map(episode =>
+                        <EpisodeInfo airtime={episode['airtime']} name={episode['name']} showName={episode['show']['name']} showType={episode['show']['type']} summary={episode['show']['summary']}/>
+                    )
             }
         </div>
     )
-
+    
     
 }
 

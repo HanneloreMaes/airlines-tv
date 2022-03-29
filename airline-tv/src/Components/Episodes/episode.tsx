@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from "react";
-import './episode.css';
+import './episode.css'
+
 
 function episodeInfo (props: any) {
     
     return(
         <div className="episodeList">
-            <div className="hourTitle">
+            <div className="centerContainer">
                 <p className="airTime">{props.airtime}</p>
-                <p>-</p>
                 <h2>{props.name}</h2>
-            </div>
-            <div className="typeSummary">
-                <div className="typeName">
+                <div className="showNameType">
                     <p className="showName">{props.showName}</p>
                     <p className="showName">-</p>
                     <p className="showName typeSmall">{props.showType}</p>
                 </div>
-                <p className="showName">{props.summary}</p>
             </div>
+            
         </div>
     )
 }
