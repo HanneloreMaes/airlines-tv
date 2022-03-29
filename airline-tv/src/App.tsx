@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Data from './Episodes/episode-data'
+import Data from './Components/Hooks/episodeData.hooks'
 
 function Overzicht(){
   return (
