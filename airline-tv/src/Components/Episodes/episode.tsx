@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import './episode.css'
+import './episode.css';
+import OnClickNav from "../Hooks/onClickNav.hooks";
+import { Link, Outlet } from "react-router-dom";
 
 
-function episodeInfo (props: any) {
+function EpisodeInfo (props: any) {
     
     return(
         <div className="episodeList">
@@ -13,11 +15,13 @@ function episodeInfo (props: any) {
                     <p className="showName">{props.showName}</p>
                     <p className="showName">-</p>
                     <p className="showName typeSmall">{props.showType}</p>
+                    <p className="showName">{props.showSummary}</p>
                 </div>
             </div>
-            
+            <button><Link to={`/episodes/${props.id}`} key={props.id}>To details</Link></button>
+            <Outlet/>
         </div>
     )
 }
 
-export default episodeInfo;
+export default EpisodeInfo;
