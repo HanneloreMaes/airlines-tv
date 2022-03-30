@@ -6,8 +6,11 @@ import DetailPage from './Components/Detail Episode/detailEpisode';
 import EpisodeInfo from './Components/Episodes/episode';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import {store} from './Store/index'
 
 ReactDOM.render(
+  <Provider store = {store}>
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}/>
@@ -18,7 +21,8 @@ ReactDOM.render(
         <h1>Page is not found</h1>
       }/>
     </Routes>
-  </BrowserRouter>,
+  </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
 
