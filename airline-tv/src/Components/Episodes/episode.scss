@@ -1,3 +1,26 @@
+a{
+    font-size: 10pt;
+    text-decoration: none;
+    text-align: center;
+}
+.btn-1 {
+    transition: all 0.3s ease;
+
+    border-radius: 15px;
+
+    background-color: #e097c8;
+    border: none;
+    padding: 2%;
+}
+
+.btn-1:hover {
+    box-shadow:
+    -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001;
+}
+
 .episodesContainer{
     display: flex;
     flex-direction: row;
