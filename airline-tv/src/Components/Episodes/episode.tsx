@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './episode.css';
+import './episode.scss'
 import OnClickNav from "../Hooks/onClickNav.hooks";
 import { Link, Outlet } from "react-router-dom";
 
@@ -7,7 +7,7 @@ import { Link, Outlet } from "react-router-dom";
 function EpisodeInfo (props: any) {
     
     return(
-        <div className="episodeList">
+        <div className="episodeList" id={props.id}>
             <div className="centerContainer">
                 <p className="airTime">{props.airtime}</p>
                 <h2>{props.name}</h2>
@@ -18,7 +18,7 @@ function EpisodeInfo (props: any) {
                     <p className="showName">{props.showSummary}</p>
                 </div>
             </div>
-            <button><Link to={`/episodes/${props.id}`} key={props.id}>To details</Link></button>
+            <button className="btn-1"><Link to={`/episodes/${props.id}`} key={props.id}>Details</Link></button>
             <Outlet/>
         </div>
     )

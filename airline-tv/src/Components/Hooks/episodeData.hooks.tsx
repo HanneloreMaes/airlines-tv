@@ -15,7 +15,7 @@ function DataEpisode(props: any){
         <div>
             {
                 episodes.map((episode) => {
-                    return <EpisodeInfo airtime={episode['airtime']} name={episode['name']} showName={episode['show']['name']} showType={episode['show']['type']} show={episode['show']['network']['name']}/>
+                    return <EpisodeInfo id={episode["show"]["id"]} airtime={episode['airtime']} name={episode['name']} showName={episode['show']['name']} showType={episode['show']['type']} show={episode['show']['network']['name']}/>
                 })
             }
         </div>

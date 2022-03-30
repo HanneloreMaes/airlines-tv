@@ -12,7 +12,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App />}/>
       <Route path="/episodes" element={< DetailPage/>}>
-        <Route path=':id' element={<DetailPage/>}/>
+        <Route path='/episodes/:id' element={<DetailPage/>}/>
       </Route>  
       <Route path='*' element={
         <h1>Page is not found</h1>
