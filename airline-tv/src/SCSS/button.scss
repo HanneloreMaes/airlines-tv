@@ -13,14 +13,24 @@ a{
     background-color: #0f1021;
     border: none;
     padding: 2% 3%;
-    margin-top: 10%;
-    margin-bottom: 5%;
+    margin: 5% 0% 5% 3%;
 }
 
 .btnPopup:hover {
-    box-shadow:
-    -4px -4px 20px 0px #fff9,
-    0px 0px 5px 0px #fff9,
-    4px 4px 20px 0px #0002,
-    8px 8px 5px 0px #0001;
+    color: black;
+    background-image: linear-gradient(to right, #a8c4db 0%, #7a8cae 90%);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+    background-position: 100% 0;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.btnPopup:focus {
+    outline: none;
+}
+
+.closeBtn{
+    margin-left: 0%;
 }
