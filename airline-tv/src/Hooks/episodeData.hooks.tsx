@@ -47,7 +47,7 @@ function DataEpisode() {
 
       const zendersInfo = Object.keys(objectZenders).map((zender:any) => {
         return objectZenders[zender].map((episode:any) => {
-          return { networkName:episode?.show?.network?.name, id:episode?.id, airtime:episode?.airtime, name:episode?.name, season:episode?.season, number:episode?.number, runtime:episode?.runtime, showName:episode?.show?.name, showType:episode?.show?.type, summary:episode?.summary, image:episode?.show?.image?.medium, showsName: episode?.show?.name}
+          return { networkName:episode?.show?.network?.name, id:episode?.id, airtime:episode?.airtime, name:episode?.name, season:episode?.season, number:episode?.number, runtime:episode?.runtime, showName:episode?.show?.name, showType:episode?.show?.type, summary:episode?.summary, image:episode?.show?.image?.medium, showsName: episode?.show?.name, rating: episode?.rating?.average }
         })
       })
       return(        
