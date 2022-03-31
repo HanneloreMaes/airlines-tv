@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import DetailPage from './Components/Detail Episode/detailEpisode';
-import EpisodeInfo from './Components/Episodes/episode';
+import DetailPage from './Components/detailEpisode';
+import EpisodeInfo from './Components/episode';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -15,7 +15,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App />}/>
       <Route path="/episodes" element={< DetailPage/>}>
-        <Route path='/episodes/:id' element={<DetailPage/>}/>
+        <Route path='/episodes/:id' element={<DetailPage/>} />
       </Route>  
       <Route path='*' element={
         <h1>Page is not found</h1>

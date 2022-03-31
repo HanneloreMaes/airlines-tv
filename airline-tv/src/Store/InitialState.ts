@@ -6,6 +6,9 @@ export interface Episode {
     showType: string;
     networkName: string;
     summary: string;
+    season: string;
+    number: string;
+    runtime: string;
   }
   
   export interface EpisodeState {

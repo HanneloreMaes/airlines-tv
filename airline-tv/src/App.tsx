@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import './App.scss';
-import Data from './Components/Hooks/episodeData.hooks';
-import Popup from './Components/Popup/popUp';
+import Data from './Hooks/episodeData.hooks';
+import { useModal } from 'react-hooks-use-modal';
 
 function Overzicht(){
-  
-  return (
+  return(
     <div className = "listOverview">
       <Data/>
     </div>
   )
+  
 }
 
 export default Overzicht;

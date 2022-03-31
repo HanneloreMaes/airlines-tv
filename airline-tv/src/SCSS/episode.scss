@@ -5,7 +5,7 @@ a{
 }
 .btn-1 {
     transition: all 0.3s ease;
-
+    width: fit-content;
     border-radius: 15px;
 
     background-color: #e097c8;
@@ -29,8 +29,8 @@ a{
 .episodeList{
     display: flex;
     flex-direction: column;
+    height: fit-content;
     border-radius: 25px;
-    min-height: 1vh;
     min-width: 25vw;
     background-image: linear-gradient(to right bottom, #ffffff, #fcfafc, #f9f6f8, #f8f1f3, #f6ecec);
 }

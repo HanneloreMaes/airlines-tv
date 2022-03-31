@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export const useLoading = (props: unknown) => {
     const [loading, setLoading] = useState(true)
