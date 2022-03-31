@@ -24,11 +24,17 @@ const EpisodeInfo = (props : any) => {
                     <p className="showName">-</p>
                     <p className="showName typeSmall">{props.showType}</p>
                 </div>
+                <p>{props.summary?
+                    <p> {props.summary.replace(/<\/?[^>]+(>|$)/g, '')}</p>:
+                    <p>Summary is not found</p>
+                    
+                }
+                </p>
             </div>
             <button className="btnPopup" onClick={open}> Details </button>
                 <Modal>
                     <div className="detailPage">
-                        <DetailPage showsName={props.showsName} id={props.id} name={props.name} season={props.season} number={props.number} runtime={props.runtime} summary={props.summary} image={props.image} networkName={props.networkName}/>
+                        <DetailPage showsName={props.showsName} id={props.id} name={props.name} season={props.season} number={props.number} runtime={props.runtime} summary={props.summary} image={props.image} networkName={props.networkName} rating={props.rating}/>
                         <button className="btnPopup closeBtn" onClick={close}>Back</button>
                     </div>
                 </Modal>

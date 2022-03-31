@@ -7,12 +7,16 @@ function DetailPage(props:any){
             <img src={props.image} alt="show-poster" />
             <div className="containerInfoDetail">
                 <h1>{props.name}</h1>
-                <p>Channel: {props.networkName}</p>
-                <p>Channel: {props.showsName}</p>
-                <p>Season: {props.season}</p>
-                <p>Episode: {props.number}</p>
+                <p>S{props.season} E{props.number}</p>
                 <p>Duration: {props.runtime} min.</p>
-                <p>Summary: {props.summary}</p>
+                <p>Channel: {props.networkName}</p>
+                <p>Show: {props.showsName}</p>
+                <p>
+                    {props.rating?
+                            <p>{props.rating}/5</p>:
+                            <p>Not rated yet</p>
+                    }
+                </p>
             </div>
         </div>
     )
