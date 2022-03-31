@@ -1,10 +1,19 @@
 .detailPage{
-    padding: 1% 0% 0% 2% ;
+    padding: 1% 0% 0% 4% ;
     display: flex;
     flex-direction: column;
     height: auto;
     border-radius: 25px;
     min-width: 24vw;
+    max-width: 54vw;
     background-image: linear-gradient(to right bottom, #a8c4db 0%, #7a8cae 90%);
 }
 
+h1{
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+p{
+    margin-bottom: 1%;
+}
