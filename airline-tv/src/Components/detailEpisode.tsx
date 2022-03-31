@@ -8,7 +8,7 @@ function DetailPage(props:any){
             <p>Season: {props.season}</p>
             <p>Episode: {props.number}</p>
             <p>Duration: {props.runtime} min.</p>
-            <p>Summary: {props.summary}
+            <p>Summary: {props.summary.replace(/<\/?[^>]+(>|$)/g, '')}
             </p>
         </div>
     )
