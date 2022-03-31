@@ -5,19 +5,22 @@ a{
 }
 
 .btnPopup {
+    color: white;
+    font-size: 12pt;
     transition: all 0.3s ease;
-    width: fit-content;
+    width: 7vw;
     border-radius: 15px;
-
-    background-color: #e097c8;
+    background-color: #0f1021;
     border: none;
-    padding: 2%;
+    padding: 2% 3%;
+    margin-top: 10%;
+    margin-bottom: 5%;
 }
 
 .btnPopup:hover {
     box-shadow:
-    -7px -7px 20px 0px #fff9,
-    -4px -4px 5px 0px #fff9,
-    7px 7px 20px 0px #0002,
-    4px 4px 5px 0px #0001;
+    -4px -4px 20px 0px #fff9,
+    0px 0px 5px 0px #fff9,
+    4px 4px 20px 0px #0002,
+    8px 8px 5px 0px #0001;
 }

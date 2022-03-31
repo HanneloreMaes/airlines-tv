@@ -1,27 +1,18 @@
-
-.detailPage{
-    border-radius: 25px;
-    min-height: 24vh;
-    min-width: 120%;
-    background-image: linear-gradient(to right bottom, #ffffff, #fcfafc, #f9f6f8, #f8f1f3, #f6ecec);
-}
-
 .episodesContainer{
     display: flex;
     flex-direction: row;
 }
 
 .episodeList{
+    padding: 1% 0% 0% 2% ;
     display: flex;
     flex-direction: column;
-    height: fit-content;
+    height: 20vh;
     border-radius: 25px;
-    min-width: 25vw;
-    background-image: linear-gradient(to right bottom, #ffffff, #fcfafc, #f9f6f8, #f8f1f3, #f6ecec);
+    min-width: 24vw;
+    background-image: linear-gradient(to right bottom, #a8c4db 0%, #7a8cae 90%);
 }
-.centerContainer{
-    padding: 3% 0% 0% 3%;
-}
+
 .showNameType{
     display: flex;
     flex-direction: row;
@@ -45,37 +36,12 @@ h2{
     align-items: center;
 }
 
-/* .episodeList{
-    padding-left: 3%;
-    display: flex;
-    flex-direction: column;
-    margin: 0%;
-    margin-bottom: 2%;
-    border-bottom: 1px solid blue
-}
-
-.hourTitle{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 0%;
-}
-.typeName{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 0%;
-}
-.typeSummary{
-    display: flex;
-    flex-direction: column;
-    margin-left: 3%;
-    margin-top: 0%;
-}
-.showName{
-    font-size: 12pt;
-    margin-top: 0%;
-}
-.typeSmall{
-    font-size: 10pt;
-} */
+.test {
+    top: '35%';
+    left: '50%';
+    right: 'auto';
+    bottom: 'auto';
+    margin-right: '-50%';
+    width: '60%';
+    transform: 'translate(-40%, -10%)';
+  }

@@ -1,6 +1,10 @@
-.containerDetail{
+.detailPage{
+    padding: 1% 0% 0% 2% ;
+    display: flex;
+    flex-direction: column;
+    height: auto;
     border-radius: 25px;
-    min-height: 1vh;
-    min-width: auto;
-    background-image: linear-gradient(to right bottom, #ffffff, #fcfafc, #f9f6f8, #f8f1f3, #f6ecec);
+    min-width: 24vw;
+    background-image: linear-gradient(to right bottom, #a8c4db 0%, #7a8cae 90%);
 }
+
