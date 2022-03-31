@@ -25,7 +25,8 @@ function DataEpisode() {
     return (
       <div>
         {episodes.map((episode: any) => {
-          return <EpisodeInfo id={episode['id']} airtime={episode['airtime']} name={episode['name']} season={episode['season']} number={episode['number']} runtime={episode['runtime']} showName={episode['show']['name']} showType={episode['show']['type']} showSummary={episode['show']['summary']}/>
+          console.log(episode);
+          return <EpisodeInfo id={episode['id']} airtime={episode['airtime']} name={episode['name']} season={episode['season']} number={episode['number']} runtime={episode['runtime']} showName={episode['show']['name']} showType={episode['show']['type']} summary={episode['summary']}/>
         })}
       </div>
     );

@@ -1,8 +1,7 @@
 import '../SCSS/episode.scss'
 import '../SCSS/button.scss'
 import DetailPage from './detailEpisode'
-import { useState } from 'react';
-import { useModal } from 'react-hooks-use-modal';
+import { useModal } from 'react-hooks-use-modal'
 
 const EpisodeInfo = (props : any) => {
     const [Modal, open, close] = useModal('root', {
