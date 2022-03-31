@@ -3,15 +3,41 @@
     flex-direction: row;
 }
 
+h3{
+    color: black;
+}
+
 .episodeList{
     padding: 1% 0% 0% 2% ;
+    margin: 3%;
+    margin-right: 20px;
     display: flex;
     flex-direction: column;
-    height: 21vh;
+    height: fit-content;
     border-radius: 25px;
     max-width: 54vw;
     min-width: 24vw;
     background-image: linear-gradient(to right bottom, #a8c4db 0%, #7a8cae 90%);
+}
+
+.episodeList:hover {
+    background-image: linear-gradient(to right, #29323c, #2b5876,);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.episodeInfoContainer{
+    margin: 1%;
+    padding: 1% 0% 0% 3% ;
+}
+
+.infoChannelTime{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .showNameType{
