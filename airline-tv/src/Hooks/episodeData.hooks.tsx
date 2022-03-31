@@ -6,6 +6,7 @@ import { fetchEpisode } from '../Store/Facade';
 import { EpisodeState } from '../Store/InitialState';
 import { selectorEpisodes, selectorEpisodesError } from '../Store/Selectors';
 
+
 function DataEpisode() {
     const episodes = useSelector<EpisodeState, any>(
       selectorEpisodes
@@ -21,15 +22,59 @@ function DataEpisode() {
         dispatch(fetchEpisode(response))
       })
     }, [dispatch]);
+
+
+    function updateData(episodes: any[]){
+      const objectZenders:any = {};
+      const arrayZenders:any = [];
+
+      episodes.forEach((episode:any) => {
+        const link = episode?.show?.network?.name;
+        const zenders = Boolean(objectZenders[link]);
   
-    return (
+        if(zenders) {
+          objectZenders[link].push(episode);
+  
+          return;
+        }
+  
+        arrayZenders.push(link);
+        objectZenders[link] = [];
+        objectZenders[link].push(episode);
+      });
+      
+      console.log("object",objectZenders)
+
+      const zendersInfo = Object.keys(objectZenders).map((zender:any) => {
+        return objectZenders[zender].map((episode:any) => {
+          return { networkName:episode?.show?.network?.name, id:episode?.id, airtime:episode?.airtime, name:episode?.name, season:episode?.season, number:episode?.number, runtime:episode?.runtime, showName:episode?.show?.name, showType:episode?.show?.type, summary:episode?.summary, image:episode?.show?.image?.medium, showsName: episode?.show?.name}
+        })
+      })
+      return(        
+        zendersInfo.map((zenders) => {
+          return (
+            <div>
+              {zenders.map((zender:any) => <EpisodeInfo {...zender}/>)}
+            </div>
+          )
+        })
+      )
+    }
+
+    return(
       <div>
-        {episodes.map((episode: any) => {
-          console.log(episode);
-          return <EpisodeInfo id={episode['id']} airtime={episode['airtime']} name={episode['name']} season={episode['season']} number={episode['number']} runtime={episode['runtime']} showName={episode['show']['name']} showType={episode['show']['type']} summary={episode['summary']}/>
-        })}
+        {updateData(episodes)}
       </div>
-    );
+      )
+
+    // return (
+    //   <div>
+    //     {updateData(episodes)}
+    //     {/* {episodes.map((episode: any) => {
+    //       return <EpisodeInfo networkName={episode?.show?.network?.name} id={episode?.id} airtime={episode?.airtime} name={episode?.name} season={episode?.season} number={episode?.number} runtime={episode?.runtime} showName={episode?.show?.name} showType={episode?.show?.type} summary={episode?.summary}/>
+    //     })} */}
+    //   </div>
+    // );
   };
 
 // function DataEpisode(props: any){
