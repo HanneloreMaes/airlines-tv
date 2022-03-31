@@ -3,7 +3,7 @@ import '../SCSS/detailEpisode.scss';
 function DetailPage(props:any){
     
     return(
-        <div className={props.id}>
+        <div className="containerDetail">
             <h1>{props.name}</h1>
             <p>Season: {props.season}</p>
             <p>Episode: {props.number}</p>

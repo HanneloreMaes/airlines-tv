@@ -1,8 +1,8 @@
 import '../SCSS/episode.scss'
+import '../SCSS/button.scss'
 import { useModal } from "react-hooks-use-modal";
 import DetailPage from './detailEpisode'
-import App from '../App';
-import { render } from 'react-dom';
+
 
 
 const EpisodeInfo = (props : any) => {
@@ -21,11 +21,11 @@ const EpisodeInfo = (props : any) => {
                     <p className="showName typeSmall">{props.showType}</p>
                 </div>
             </div>
-            <button className="btn-1" onClick={open}> Details
+            <button className="btnPopup" onClick={open}> Details
                 <Modal>
-                    <div>
+                    <div className="detailPage">
                         <DetailPage id={props.id} name={props.name} season={props.season} number={props.number} runtime={props.runtime} summary={props.summary}/>
-                        <button onClick={close}>CLOSE</button>
+                        <button className="btnPopup" onClick={close}>CLOSE</button>
                     </div>
                 </Modal>       
             </button>
