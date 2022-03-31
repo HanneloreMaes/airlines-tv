@@ -1,6 +1,8 @@
 import '../SCSS/episode.scss'
 import { useModal } from "react-hooks-use-modal";
 import DetailPage from './detailEpisode'
+import App from '../App';
+import { render } from 'react-dom';
 
 
 const EpisodeInfo = (props : any) => {
@@ -30,25 +32,4 @@ const EpisodeInfo = (props : any) => {
         </div>
     )
 }
-
 export default EpisodeInfo;
-
-{/* <Link to={`/episodes/${props.id}`} key={props.id}>Details</Link> */}
-
-// const [Modal, open, close, isOpen] = useModal('root', {
-    //   preventScroll: true,
-    //   closeOnOverlayClick: false
-    // });
-    // return (
-    //   <div>
-    //     <p>Modal is Open? {isOpen ? 'Yes' : 'No'}</p>
-    //     <button onClick={open}>OPEN</button>
-    //     <Modal>
-    //       <div>
-    //         <h1>Title</h1>
-    //         <p>This is a customizable modal.</p>
-    //         <button onClick={close}>CLOSE</button>
-    //       </div>
-    //     </Modal>
-    //   </div>
-    // );

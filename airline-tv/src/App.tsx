@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './App.scss';
 import Data from './Hooks/episodeData.hooks';
-import { useModal } from 'react-hooks-use-modal';
+import { useLoading } from './Hooks/isLoading.hooks';
 
-function Overzicht(){
+function App(){
   return(
     <div className = "listOverview">
       <Data/>
@@ -12,4 +12,4 @@ function Overzicht(){
   
 }
 
-export default Overzicht;
+export default App;
