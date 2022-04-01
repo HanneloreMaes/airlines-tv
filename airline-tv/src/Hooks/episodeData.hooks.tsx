@@ -1,4 +1,5 @@
 import {useEffect} from 'react';
+import '../SCSS/episodeData.scss'
 import { useSelector, useDispatch } from 'react-redux';
 import EpisodeInfo from '../Components/episode';
 import { episodeService } from '../Services/episodesService';
@@ -49,22 +50,16 @@ function DataEpisode() {
         return objectZenders[zender].map((episode:any) => {
           return { networkName:episode?.show?.network?.name, id:episode?.id, airtime:episode?.airtime, name:episode?.name, season:episode?.season, number:episode?.number, runtime:episode?.runtime, showName:episode?.show?.name, showType:episode?.show?.type, summary:episode?.summary, image:episode?.show?.image?.medium, showsName: episode?.show?.name, rating: episode?.rating?.average }
         })
-      })
+      });
+
       return(
           zendersInfo.map((zenders) => {
-            return (
-              <div>
-                {zenders.map((zender:any) => {
-                  console.log("channel", zender?.networkName);
-                  return (
-                    <div>
-                        <p>
-                          <EpisodeInfo {...zender}/>
-                        </p>
-                    </div>
-                  
-                  )
-                })}
+            return(
+              <div className='channelListContainer'>
+                <div className='header-zender'>
+                  <h3>{zenders[0]?.networkName}</h3>
+                </div>
+                {zenders.map((zender:any) => <EpisodeInfo {...zender}/>)}
               </div>
             )
           })
@@ -77,30 +72,4 @@ function DataEpisode() {
       </div>
       )
   };
-
-// function DataEpisode(props: any){
-//     const [episodes, setEpisodes]=useState([]);
-//     const isLoading = useLoading(episodes)
-
-//     useEffect(() => {
-//         episodeService.getEpisodes(props).then((response) => {
-//             setEpisodes(response);
-//         })
-//     }, [props]);
-//     return(
-//         <div>
-//             <p>
-//                 { isLoading? 'Loading shows' :
-//                     episodes.map((episode) => {
-//                         return <EpisodeInfo id={episode["id"]} airtime={episode['airtime']} name={episode['name']} showName={episode['show']['name']} showType={episode['show']['type']} show={episode['show']['network']['name']}/>
-//                     })
-//                 }
-//             </p>
-            
-//         </div>
-//     )
-    
-    
-// }
-
 export default DataEpisode;

@@ -13,11 +13,7 @@ const EpisodeInfo = (props : any) => {
     return(
         <div className="episodeList" id={props.id}>
             <div className="episodeInfoContainer">
-                <div className="infoChannelTime">
-                    <p className='airTime'>{props.networkName}</p>
-                    <p className='airTime'>&nbsp;-&nbsp;</p>
-                    <p className="airTime">{props.airtime}</p>
-                </div>
+                <p className="airTime">{props.airtime}</p>
                 <h2>{props.name}</h2>
                 <div className="showNameType">
                     <p className="showName">{props.showName}</p>
