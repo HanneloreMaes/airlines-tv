@@ -26,8 +26,7 @@ const EpisodeInfo = (props : any) => {
                 </div>
                 <p>{props.summary?
                     <p> {props.summary.replace(/<\/?[^>]+(>|$)/g, '')}</p>:
-                    <p>Summary is not found</p>
-                    
+                    <p>Summary is not found</p> 
                 }
                 </p>
             </div>
