@@ -13,9 +13,8 @@ code {
 }
 
 ::-webkit-scrollbar {
-  position: sticky ;
-  width: 1vw;
-  height: 1vh;
+  width: 0.7vw;
+  height: 1.4vh;
 }
 
 ::-webkit-scrollbar-track {
