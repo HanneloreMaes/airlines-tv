@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import './App.scss';
+import './SCSS/App.scss';
 import Data from './Hooks/episodeData.hooks';
 import Header from './Components/Header';
 

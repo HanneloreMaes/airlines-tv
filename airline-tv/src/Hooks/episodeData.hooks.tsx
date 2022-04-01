@@ -57,7 +57,11 @@ function DataEpisode() {
             return(
               <div className='channelListContainer'>
                 <div className='header-zender'>
-                  <h3>{zenders[0]?.networkName}</h3>
+                  <h3>{zenders[0]?.networkName ?
+                    <h3>{zenders[0]?.networkName}</h3>:
+                    <h3>No channel found</h3>}
+                  </h3>
+                  <hr></hr>
                 </div>
                 {zenders.map((zender:any) => <EpisodeInfo {...zender}/>)}
               </div>
