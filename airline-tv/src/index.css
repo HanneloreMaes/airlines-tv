@@ -12,11 +12,8 @@ code {
     monospace;
 }
 
-::-webkit-scrollbar{
-  display: none;
-}
-
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
+  position: sticky ;
   width: 1vw;
   height: 1vh;
 }
@@ -33,4 +30,4 @@ code {
   border-radius: 10px;
   background-color: #f5f5f5;
   background-image: linear-gradient(to right bottom, #777777, #706d71, #6b6368, #67595d, #635050);
-} */
+}
