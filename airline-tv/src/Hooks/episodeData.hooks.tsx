@@ -50,14 +50,24 @@ function DataEpisode() {
           return { networkName:episode?.show?.network?.name, id:episode?.id, airtime:episode?.airtime, name:episode?.name, season:episode?.season, number:episode?.number, runtime:episode?.runtime, showName:episode?.show?.name, showType:episode?.show?.type, summary:episode?.summary, image:episode?.show?.image?.medium, showsName: episode?.show?.name, rating: episode?.rating?.average }
         })
       })
-      return(        
-        zendersInfo.map((zenders) => {
-          return (
-            <div>
-              {zenders.map((zender:any) => <EpisodeInfo {...zender}/>)}
-            </div>
-          )
-        })
+      return(
+          zendersInfo.map((zenders) => {
+            return (
+              <div>
+                {zenders.map((zender:any) => {
+                  console.log("channel", zender?.networkName);
+                  return (
+                    <div>
+                        <p>
+                          <EpisodeInfo {...zender}/>
+                        </p>
+                    </div>
+                  
+                  )
+                })}
+              </div>
+            )
+          })
       )
     }
 
@@ -66,15 +76,6 @@ function DataEpisode() {
         {updateData(episodes)}
       </div>
       )
-
-    // return (
-    //   <div>
-    //     {updateData(episodes)}
-    //     {/* {episodes.map((episode: any) => {
-    //       return <EpisodeInfo networkName={episode?.show?.network?.name} id={episode?.id} airtime={episode?.airtime} name={episode?.name} season={episode?.season} number={episode?.number} runtime={episode?.runtime} showName={episode?.show?.name} showType={episode?.show?.type} summary={episode?.summary}/>
-    //     })} */}
-    //   </div>
-    // );
   };
 
 // function DataEpisode(props: any){
